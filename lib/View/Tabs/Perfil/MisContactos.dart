@@ -20,7 +20,7 @@ class MisContactosState extends State<MisContactos> {
   }
 
   void _refresh() {
-    var url = "http://18.218.97.74/sportin-web/symfony/web/app_dev.php/contact/"+token;
+    var url = globals.url+"contact/"+token;
     print(url);
     setState(() {
       _response = http.get(

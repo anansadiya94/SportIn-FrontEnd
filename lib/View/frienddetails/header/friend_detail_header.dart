@@ -93,7 +93,7 @@ class FriendDetailHeader extends StatelessWidget {
 
     Future _saveData() async {
       var token = globals.tokenPerUser;
-      var url = "http://18.218.97.74/sportin-web/symfony/web/app_dev.php/deactivateuser";
+      var url = globals.url+"deactivateuser";
       var response = await http.post(
         url,
         headers:{ "Accept": "application/json" } ,
@@ -274,7 +274,7 @@ class FriendDetailHeader extends StatelessWidget {
     var json = jsonCodec.encode(data);
     print("json=$json");
     print(data);
-    var url = "http://18.218.97.74/sportin-web/symfony/web/app_dev.php/updatereactedannouncement";
+    var url = globals.url+"updatereactedannouncement";
     var response = await http.post(
       url,
       headers:{ "Accept": "application/json" } ,
@@ -290,7 +290,7 @@ class FriendDetailHeader extends StatelessWidget {
     var json = jsonCodec.encode(data);
     print("json=$json");
     print(data);
-    var url = "http://18.218.97.74/sportin-web/symfony/web/app_dev.php/contact";
+    var url = globals.url+"contact";
     var response = await http.post(
       url,
       headers:{ "Accept": "application/json" } ,

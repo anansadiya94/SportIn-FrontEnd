@@ -107,7 +107,7 @@ class RegistrarseJ4State extends State<RegistrarseJ4> {
   Future _savePhoto(PhotoPost data)async {
     var json = jsonCodec.encode(data);
     print("json=$json");
-    var url = "http://18.218.97.74/sportin-web/symfony/web/app_dev.php/imageUpload";
+    var url = globals.url+"imageUpload";
     var response = await http.post(
       url,
       headers:{ "Accept": "application/json" } ,
@@ -130,7 +130,7 @@ class RegistrarseJ4State extends State<RegistrarseJ4> {
   Future _saveData(SignUpPost data)async {
     var json = jsonCodec.encode(data);
     print("json=$json");
-    var url = "http://18.218.97.74/sportin-web/symfony/web/app_dev.php/user";
+    var url = globals.url+"user";
     var response = await http.post(
       url,
       headers:{ "Accept": "application/json" } ,

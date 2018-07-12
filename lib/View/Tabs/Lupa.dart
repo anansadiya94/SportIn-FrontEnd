@@ -22,7 +22,7 @@ class Lupa extends StatelessWidget {
                 width: 200.0,
                 image: new AssetImage("assets/icono_1.png"),),
               new Text(
-                'En construccion', 
+                'En construcción', 
                 style: new TextStyle(color: color_backgroung_text, fontSize: 40.0),
               ),
             ]

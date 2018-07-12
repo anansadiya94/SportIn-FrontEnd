@@ -22,7 +22,7 @@ class AceptadasState extends State<Aceptadas> {
   void _refresh() {
     setState(() {
       _response = http.get(
-        Uri.encodeFull("http://18.218.97.74/sportin-web/symfony/web/app_dev.php/reactedannouncement/$token/2"),
+        Uri.encodeFull(globals.url+"reactedannouncement/$token/2"),
         headers : {
           "Accept": "application/json"
         }

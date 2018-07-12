@@ -24,7 +24,7 @@ class HomeState extends State<Home> {
   void _refresh() {
     setState(() {
       _response = http.get(
-        Uri.encodeFull("http://18.218.97.74/sportin-web/symfony/web/app_dev.php/announcement/"),
+        Uri.encodeFull(globals.url+"announcement/"),
         headers : {
           "Accept": "application/json"
         }
@@ -80,7 +80,7 @@ class AnnouncementData extends StatelessWidget {
     var json = jsonCodec.encode(data);
     print("json=$json");
     print(data);
-    var url = "http://18.218.97.74/sportin-web/symfony/web/app_dev.php/reactedannouncement";
+    var url = globals.url+"reactedannouncement";
     var response = await http.post(
       url,
       headers:{ "Accept": "application/json" } ,

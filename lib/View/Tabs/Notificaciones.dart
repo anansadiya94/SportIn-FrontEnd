@@ -24,7 +24,7 @@ class NotificacionesState extends State<Notificaciones> {
   void _refresh() {
     setState(() {
       _response = http.get(
-        Uri.encodeFull("http://18.218.97.74/sportin-web/symfony/web/app_dev.php/reactedannouncementnotification/$token"),
+        Uri.encodeFull(globals.url+"reactedannouncementnotification/$token"),
         headers : {
           "Accept": "application/json"
         }

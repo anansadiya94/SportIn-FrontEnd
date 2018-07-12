@@ -22,7 +22,7 @@ class PendientesState extends State<Pendientes> {
   void _refresh() {
     setState(() {
       _response = http.get(
-        Uri.encodeFull("http://18.218.97.74/sportin-web/symfony/web/app_dev.php/reactedannouncement/$token/0"),
+        Uri.encodeFull(globals.url+"reactedannouncement/$token/0"),
         headers : {
           "Accept": "application/json"
         }

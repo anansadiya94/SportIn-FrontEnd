@@ -4,6 +4,7 @@ import 'package:crypto/crypto.dart';
 import 'package:sportin/Estilo.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:sportin/View/Globals.dart' as globals;
 import 'package:sportin/View/Registrarse/Jugador/RegistrarseJ2.dart';
 
 class RegistrarseJ1 extends StatefulWidget {
@@ -70,7 +71,7 @@ class _RegistrarseJ1State extends State<RegistrarseJ1> {
       _any.add((i+1950).toString());
     }
     var _responseCorreo = await http.get(
-      Uri.encodeFull("http://18.218.97.74/sportin-web/symfony/web/app_dev.php/repeatedEmail/$_email"),
+      Uri.encodeFull(globals.url+"repeatedEmail/$_email"),
       headers : {
         "Accept": "application/json"
       }

@@ -27,7 +27,7 @@ class Signup extends StatelessWidget {
     void _general(int roleId) async {
       //get de populations para la siguiente pestaña.
       var _responseP = await http.get(
-        Uri.encodeFull("http://18.218.97.74/sportin-web/symfony/web/app_dev.php/populations/"),
+        Uri.encodeFull(globals.url+"populations/"),
         headers : {
           "Accept": "application/json"
         }
@@ -39,7 +39,7 @@ class Signup extends StatelessWidget {
       }
       //get de contries para la siguiente pestaña.
       var _responseC = await http.get(
-      Uri.encodeFull("http://18.218.97.74/sportin-web/symfony/web/app_dev.php/countries/"),
+      Uri.encodeFull(globals.url+"countries/"),
         headers : {
           "Accept": "application/json"
         }
@@ -51,7 +51,7 @@ class Signup extends StatelessWidget {
       }
       //get de roles para la siguiente pestaña.
       var _responseD = await http.get(
-      Uri.encodeFull("http://18.218.97.74/sportin-web/symfony/web/app_dev.php/position"),
+      Uri.encodeFull(globals.url+"position"),
         headers : {
           "Accept": "application/json"
         }
@@ -65,7 +65,7 @@ class Signup extends StatelessWidget {
       }
       //get de clubs para la siguiente pestaña.
       var _responseCl = await http.get(
-      Uri.encodeFull("http://18.218.97.74/sportin-web/symfony/web/app_dev.php/clubs"),
+      Uri.encodeFull(globals.url+"clubs"),
         headers : {
           "Accept": "application/json"
         }

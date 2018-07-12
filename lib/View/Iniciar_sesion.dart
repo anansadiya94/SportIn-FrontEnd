@@ -31,7 +31,7 @@ class _LoginState extends State<Login> {
     }
     //get de roles para pestaña crear oferta jugador
     var _responseD = await http.get(
-    Uri.encodeFull("http://18.218.97.74/sportin-web/symfony/web/app_dev.php/position"),
+    Uri.encodeFull(globals.url+"position"),
       headers : {
         "Accept": "application/json"
       }
@@ -61,7 +61,7 @@ class _LoginState extends State<Login> {
   Future _saveData(SignInData data) async {
     var json = jsonCodec.encode(data);
     print("json=$json");
-    var url = "http://18.218.97.74/sportin-web/symfony/web/app_dev.php/login";
+    var url = globals.url+"login";
     var response = await http.post(
       url,
       headers:{ "Accept": "application/json" } ,

@@ -21,7 +21,7 @@ class MisOfertasState extends State<MisOfertas> {
   }
 
   void _refresh() {
-    var url = "http://18.218.97.74/sportin-web/symfony/web/app_dev.php/announcementPerUser/"+token;
+    var url = globals.url+"announcementPerUser/"+token;
     print(url);
     setState(() {
       _response = http.get(

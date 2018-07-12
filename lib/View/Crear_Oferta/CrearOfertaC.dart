@@ -50,7 +50,7 @@ class CrearOfertaCState extends State<CrearOfertaC> {
     var json = jsonCodec.encode(data);
     print("token=$token, json=$json");
     print(data);
-    var url = "http://18.218.97.74/sportin-web/symfony/web/app_dev.php/announcement";
+    var url = globals.url+"announcement";
     var response = await http.post(
       url,
       headers:{ "Accept": "application/json" } ,
