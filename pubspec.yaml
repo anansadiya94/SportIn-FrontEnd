@@ -14,16 +14,16 @@ flutter_icons:
 dependencies:
   flutter:
     sdk: flutter
-  shared_preferences: "^0.4.1"
-  intl: "^0.15.6"
-  numberpicker: "^0.1.0"
-  image_picker: "^0.4.1"
-  http: ^0.12.0
-  crypto: ^2.0.6
+  shared_preferences: "^0.5.2"
+  intl: "^0.15.8"
+  numberpicker: "^1.0.0"
+  image_picker: "^0.6.0+1"
+  http: "^0.12.0+2"
+  crypto: "^2.0.6"
   #jaguar_jwt: "^1.1.5"
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^0.1.0
+  cupertino_icons: "^0.1.2"
 
 
 # For information on the generic Dart part of this file, see the
